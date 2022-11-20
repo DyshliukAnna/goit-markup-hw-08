@@ -1,0 +1,36 @@
+/* Кнопка на головній сторінці */
+
+.main-button {
+    max-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    margin: 0 auto;
+
+    color: $hero-color;
+    background-color: $accent-color;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+
+    letter-spacing: 0.06em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-button:hover,
+.main-button:focus {
+    color: $hero-color;
+    background-color: $accent-background-color;
+}

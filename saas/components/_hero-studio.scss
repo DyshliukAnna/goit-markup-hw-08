@@ -1,0 +1,45 @@
+//  Cекція hero 
+
+.hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-color: $hero-background-color;
+    
+    &--overlay {
+            height: 600px;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/background-image-hero.jpg);
+    
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+}
+
+// Overlay 
+
+
+.hero__title {
+    margin: 0 auto 30px;
+    max-width: 696px;
+
+    color: $hero-color;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+// Додаткове оформлення розмірів кнопки в секціі hero
+
+.hero__main-button {
+    min-width: 218px;
+    padding: 10px 32px;
+}

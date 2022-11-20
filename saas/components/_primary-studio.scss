@@ -1,0 +1,51 @@
+.primary {
+    background-color: var(--hero-color);
+}
+
+/* Контейнер для флексів в головній секції Наші переваги*/
+
+.primary-container {
+    display: flex;
+}
+
+.primary-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: calc(-1 * $card-portfolio-gap);
+    margin-left: calc(-1 * $card-portfolio-gap);
+
+    list-style: none;
+}
+
+.primary-list__item {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+
+    margin-top: $card-portfolio-gap;
+    margin-left: $card-portfolio-gap;
+    flex-basis: calc(100% / 4 - ($card-portfolio-gap));
+}
+
+.primary-list__icon-background {
+    height: 120px;
+    max-width: 100%;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: $svg-background-color;
+    border-radius: 4px;
+}
+
+.primary-list__title {
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.primary-list__description {
+    color: var(--secondary-color);
+
+    line-height: calc(24 / 14);
+}
