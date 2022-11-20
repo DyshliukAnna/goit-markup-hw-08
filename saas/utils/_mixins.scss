@@ -8,31 +8,31 @@
 
 // Міксин для обрізання тексту,  в інці якого  тексту просто поставиться...
 
-@mixin ellipsis () {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+// @mixin ellipsis () {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
 
 
 
 
 // Перший міксин використовуються в домашці, інші, що знизу - написала собі для прикладу. // при використанні такого міксину створиться 2 селектори з різними значеннями
 
-@mixin circle ($width, $height, $color) {
-    width: $width;
-    height: $height;    
-    background-color:$color;
-    border-radius: 50%;
-}
+// @mixin circle ($width, $height, $color) {
+//     width: $width;
+//     height: $height;    
+//     background-color:$color;
+//     border-radius: 50%;
+// }
 
-p {
-@include circle (20px, 20px, red)
-}
+// p {
+// @include circle (20px, 20px, red)
+// }
 
-div{
-@include circle (120px, 120px, green)
-}
+// div{
+// @include circle (120px, 120px, green)
+// }
 
 
 
@@ -41,15 +41,15 @@ div{
 
 // $icons: facebook, instagram, github, linkedin
 
-@mixin generateIcons ($iconc) {
-    @each $iconName in $icons {
-        .icon-#{$iconName}{
-            background-image: url("../images/#$iconName.svg");
-        }
+// @mixin generateIcons ($iconc) {
+//     @each $iconName in $icons {
+//         .icon-#{$iconName}{
+//             background-image: url("../images/#$iconName.svg");
+//         }
         
-    }
+//     }
     
-}
+// }
 
 
 
@@ -58,20 +58,20 @@ div{
 // Директива @each для відступів mb (margin-bottom) з кроком у 8 пікселів. Буде створено 4 різних селектори mb-8px,mb-16px,mb-24px,mb-32px
 
 
-@each $mb in 8px,16px,24px,32px {
-    .mb-#{$mb} {
-        margin-bottom: $mb;
-    }
-}
+// @each $mb in 8px,16px,24px,32px {
+//     .mb-#{$mb} {
+//         margin-bottom: $mb;
+//     }
+// }
 
 
 
 // Скидання дефолтних значень браузера зайвих, які нам не потрібні.
 
 
-@mixin list () {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+// @mixin list () {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
 
-}
+// }
