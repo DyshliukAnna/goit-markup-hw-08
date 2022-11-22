@@ -69,6 +69,21 @@ label {
   margin: 0 auto;
   padding: 0 15px;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 /* Картки на сторінці Портфоліо */
 /*  Флекси для оформлення карток на сторінці Портфоліо */
@@ -716,15 +731,20 @@ label {
 
 /* Список в Хедері */
 .header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header__item:not(:last-child) {
