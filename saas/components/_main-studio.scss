@@ -1,8 +1,12 @@
 //  Флекси + серія фотографій з секції: "Чим ми займаємось" на головній сторінці
 
 .main {
+        @media screen and (min-width:0px)and(max-width:1200px) {
+                display: none;
+            }
     background-color: $hero-color;
     padding-top: 0;
+  
 }
 
 .main__title {
