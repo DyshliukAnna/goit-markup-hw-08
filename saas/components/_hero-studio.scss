@@ -2,23 +2,44 @@
 
 .hero {
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
     background-color: $hero-background-color;
     
     &--overlay {
-            height: 600px;
-            max-width: 1600px;
+            height: 400px;
+            max-width: 480px;
             margin-left: auto;
             margin-right: auto;
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/background-image-hero.jpg);
-    
+                    url(/images/mobile-background-image-hero.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-        }
+
+
+                @media screen and(min-width:768px) {
+                    height: 400px;
+                    max-width: 768px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                            url(/images/tablet-background-image.jpg);
+                }
+
+                @media screen and(min-width:1200px) {
+                    height: 600px;
+                    max-width: 1600px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                            url(../images/background-image-hero.jpg);
+                
+                }
+    
+
+    }
 }
 
 // Overlay 
@@ -31,15 +52,31 @@
     color: $hero-color;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: calc(60 / 44);
+    font-size: 26px;
+    line-height: calc(42/26);
 
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and(min-width:768px) {
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    }
+    @media screen and(min-width:1200px) {
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    }
+
 }
 // Додаткове оформлення розмірів кнопки в секціі hero
 
 .hero__main-button {
-    min-width: 218px;
-    padding: 10px 32px;
-}
+
+        padding: 10px 23px;
+
+    @media screen and (min-width:1200px) {
+        min-width: 218px;
+        padding: 10px 32px;
+        }
+    }
+ 
