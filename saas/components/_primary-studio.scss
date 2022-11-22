@@ -21,31 +21,50 @@
 .primary-list__item {
     display: flex;
     flex-direction: column;
-    width: 270px;
-
-    margin-top: $card-portfolio-gap;
+    width: 450px;
+margin-top: $card-portfolio-gap;
     margin-left: $card-portfolio-gap;
+   
+  
+
+@media screen and( min-width:768px) {
+    width: 354px;
+    flex-basis: calc(100% / 2 - ($card-portfolio-gap));
+}
+@media screen and( min-width:1200px) {
+    width: 270px;
+    margin-top: $card-portfolio-gap;
+     margin-left: $card-portfolio-gap;
     flex-basis: calc(100% / 4 - ($card-portfolio-gap));
 }
 
+}
+
 .primary-list__icon-background {
+
+    
     height: 120px;
     max-width: 100%;
     padding: 25px 100px;
     margin-bottom: 30px;
     background-color: $svg-background-color;
     border-radius: 4px;
+    text-align: center;
 }
 
 .primary-list__title {
     margin-bottom: 10px;
-
+    text-align: center; 
     text-transform: uppercase;
     font-size: 14px;
+
+    @media screen and(min-width:768px) {
+    text-align: start;
+        }
 }
 
 .primary-list__description {
-    color: var(--secondary-color);
+    color: $secondary-color;
 
     line-height: calc(24 / 14);
 }
