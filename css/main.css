@@ -248,13 +248,13 @@ label {
     padding-left: 76px;
     padding-right: 89px;
     padding-bottom: 276px;
-    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer {
     padding-left: 0px;
     padding-right: 0px;
+    padding-bottom: 60px;
     width: 1600px;
   }
 }
