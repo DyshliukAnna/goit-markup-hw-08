@@ -3,6 +3,7 @@
 /*  Флекси для оформлення карток на сторінці Портфоліо */
 
 .list-portfolio {
+
     display: flex;
     flex-wrap: wrap;
 
@@ -11,9 +12,19 @@
 }
 
 .list-prtfolio__item {
-    margin-top: $card-portfolio-gap;
-    margin-left: $card-portfolio-gap;
-    flex-basis: calc(100% / 3 - $card-portfolio-gap);
+   margin-bottom: 30px;
+   margin: 0 auto;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 0px;
+        margin-top: $card-portfolio-gap;
+        margin-left: $card-portfolio-gap;
+        flex-basis: calc(100%/2 - $card-portfolio-gap);
+    }
+    @media screen and (min-width:1200px) {
+        flex-basis: calc(100% / 3 - $card-portfolio-gap);
+    }
+    
 }
 
 .thumb-card__title {
@@ -63,6 +74,33 @@
 .thumb-card {
     position: relative;
     overflow: hidden;
+
+    &__mobile-portfolio{
+        display: block;
+        width: 450px;
+
+
+        @media screen and(min-width:768px) {
+        display: none;
+
+        }
+    }
+    &__tablet-portfolio{
+        display: none;
+        width: 354px;
+
+        @media screen and(min-width:768px) and (max-width:1200px) {
+                display: block;
+            }
+    }
+    &__desktop-portfolio{
+        display: none;
+        width: 370px;
+        @media screen and(min-width:1200px) {
+                display: block;
+            }
+    }
+
 }
 
 .thumb-card__overlay {
