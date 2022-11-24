@@ -7,6 +7,10 @@
 
   justify-content: space-between;
   text-transform: uppercase;
+
+    // @media screen and (max-width:768px) {
+    //     padding-bottom: 60px;
+    //   }
 }
 
 .network__link {
@@ -24,6 +28,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+
     &:hover,
     &:focus {
         background-color: $accent-color;
@@ -32,6 +37,7 @@
       }
     &--painted {
           background-color: rgba(255, 255, 255, 0.1);
+        
         }
 }
 
