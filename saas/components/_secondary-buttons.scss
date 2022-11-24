@@ -4,7 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    flex-basis: calc(100%/3);
+    flex-wrap: wrap;
+
+    @media screen and(min-width:1200px){
+            margin-bottom: 50px;
+    }
+
 }
 
 .secondary-button {
