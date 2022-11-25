@@ -3,23 +3,47 @@
 /*  Флекси для оформлення карток на сторінці Портфоліо */
 
 .list-portfolio {
+    margin: 0 auto;
+    display: block;
+    
+  
+    @media screen and (min-width:768px) {
+        // margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        // flex-basis: calc((100% - $card-portfolio-gap)/2);
+        // }
+  
 
-    display: flex;
-    flex-wrap: wrap;
+        // margin-top: calc(-1 * $card-portfolio-gap);
+        // margin-left: calc(-1 * $card-portfolio-gap);
+     }
 
-    margin-top: calc(-1 * $card-portfolio-gap);
-    margin-left: calc(-1 * $card-portfolio-gap);
+    &:nth-child(1) {
+
+        @media screen and (min-width:768px) {
+            height: 440px;
+        }
+    }
 }
 
 .list-prtfolio__item {
+    display: block;
    margin-bottom: 30px;
-   margin: 0 auto;
+   width: 450px;
+//    margin: 0 auto;
 
     @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
         margin-bottom: 0px;
-        margin-top: $card-portfolio-gap;
-        margin-left: $card-portfolio-gap;
-        flex-basis: calc(100%/2 - $card-portfolio-gap);
+
+        flex-basis: calc(100% / 2 - $card-portfolio-gap);
+        
+        // margin-top: $card-portfolio-gap;
+        // margin-left: $card-portfolio-gap;
+        // flex-basis: calc(100%/2 - $card-portfolio-gap);
     }
     @media screen and (min-width:1200px) {
         flex-basis: calc(100% / 3 - $card-portfolio-gap);
@@ -44,6 +68,18 @@
     border-right: 1px solid $border-color-portfolio;
     border-bottom: 1px solid $border-color-portfolio;
     border-left: 1px solid $border-color-portfolio;
+
+    width: 450px;
+    
+        @media screen and (min-width:768px) {
+            width: 354px;
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 370px;
+    
+        }
 }
 
 .thumb-card__description {
@@ -57,9 +93,22 @@
 .list-portfolio__link {
     position: relative;
     display: block;
-    width: 370px;
+
+ 
     text-decoration: none;
     margin-bottom: 0;
+
+    // width: 450px;
+    
+    //     @media screen and (min-width:768px) {
+    //         width: 354px;
+    
+    //     }
+    
+    //     @media screen and (min-width:1200px) {
+    //         width: 370px;
+    
+    //     }
 
     &:hover,
     &:focus {
@@ -74,6 +123,18 @@
 .thumb-card {
     position: relative;
     overflow: hidden;
+    width: 450px;
+
+@media screen and (min-width:768px) {
+    width: 354px;
+    
+}
+
+@media screen and (min-width:1200px) {
+    width: 370px;
+    
+}
+
 
     &__mobile-portfolio{
         display: block;
