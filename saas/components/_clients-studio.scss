@@ -8,7 +8,7 @@
     
     flex-wrap: wrap;
     gap: $card-portfolio-gap;
-    // flex-basis: calc(100%-($card-portfolio-gap))/2;
+    // flex-basis: calc(100% / 2-($card-portfolio-gap));
 }
 
 .clients__text {
