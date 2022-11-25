@@ -87,24 +87,38 @@ label {
 /* Картки на сторінці Портфоліо */
 /*  Флекси для оформлення карток на сторінці Портфоліо */
 .list-portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .list-portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .list-portfolio:nth-child(1) {
+    height: 440px;
+  }
 }
 
 .list-prtfolio__item {
+  display: block;
   margin-bottom: 30px;
-  margin: 0 auto;
+  width: 450px;
 }
 @media screen and (min-width: 768px) {
   .list-prtfolio__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-bottom: 0px;
-    margin-top: 30px;
-    margin-left: 30px;
     -ms-flex-preferred-size: calc(50% - 30px);
         flex-basis: calc(50% - 30px);
   }
@@ -130,6 +144,17 @@ label {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .thumb-card__part {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .thumb-card__part {
+    width: 370px;
+  }
 }
 
 .thumb-card__description {
@@ -142,7 +167,6 @@ label {
 .list-portfolio__link {
   position: relative;
   display: block;
-  width: 370px;
   text-decoration: none;
   margin-bottom: 0;
 }
@@ -155,6 +179,17 @@ label {
 .thumb-card {
   position: relative;
   overflow: hidden;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .thumb-card {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .thumb-card {
+    width: 370px;
+  }
 }
 .thumb-card__mobile-portfolio {
   display: block;
@@ -844,6 +879,7 @@ label {
 
 /* Header */
 .header {
+  position: relative;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 }
@@ -874,6 +910,29 @@ label {
   background-color: #ffffff;
 }
 
+.header__menu-container {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 48px 40px;
+  text-align: center;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  height: 796px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: #212121;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.header__menu-container.is-open {
+  display: block;
+}
+
 .header__burger-menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -882,16 +941,24 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 8px 12px;
   margin: 0;
-  width: 40px;
-  height: 40px;
-  text-align: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 @media screen and (min-width: 768px) {
   .header__burger-menu {
     display: none;
   }
+}
+.header__burger-menu.is-open .header__icon-close {
+  display: block;
+}
+.header__burger-menu.is-open .header__icon-menu {
+  display: none;
+}
+.header__burger-menu .header__icon-close {
+  display: none;
 }
 
 .header__link {
@@ -1439,16 +1506,18 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 33.3333333333%;
-      flex-basis: 33.3333333333%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .secondary-buttons {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .secondary-buttons {
