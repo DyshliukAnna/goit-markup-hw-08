@@ -8,6 +8,11 @@ body {
     letter-spacing: 0.03em;
 }
 
+body.modal-open{
+    // Після цього body не проскролбюється під модалкою.(modal-open зроблено через java script, modal.js)
+    overflow: hidden;
+}
+
 /* обнуляє відступи для h, p ul */
 
 h1,
