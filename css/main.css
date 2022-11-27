@@ -53,6 +53,7 @@ img {
 }
 
 .section {
+  margin: 0 auto;
   padding: 60px 0;
 }
 @media screen and (min-width: 1200px) {
@@ -73,9 +74,13 @@ label {
 }
 
 .container {
-  width: 480px;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -334,7 +339,8 @@ label {
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 60px;
-    width: 1600px;
+    width: 100%;
+    max-width: 1600px;
   }
 }
 
@@ -349,9 +355,6 @@ label {
   -webkit-box-pack: baseline;
       -ms-flex-pack: baseline;
           justify-content: baseline;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media screen and (min-width: 768px) {
   .footer__container {
@@ -359,6 +362,16 @@ label {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -483,6 +496,7 @@ label {
 @media screen and (min-width: 1200px) {
   .join {
     margin-right: 94px;
+    margin-bottom: 0;
   }
 }
 
@@ -518,11 +532,6 @@ label {
     padding: 208px 159px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .backdrop {
-    padding: 0;
-  }
-}
 
 .backdrop.is-hidden {
   opacity: 0;
@@ -534,18 +543,27 @@ label {
 .backdrop__modal {
   display: block;
   padding: 40px;
+  margin: 0 auto;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform cubic-bezier(0.4, 0, 0.2, 1);
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 609px;
   background-color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
   .backdrop__modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
+    max-height: 581px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
 .backdrop.is-hidden .backdrop__modal {
@@ -927,12 +945,12 @@ label {
   background-color: #ffffff;
 }
 
-.header__menu-container {
+.menu-container {
   display: none;
   position: absolute;
-  background-color: rgb(238, 9, 9);
+  background-color: #ffffff;
   padding: 48px 40px;
-  text-align: center;
+  text-align: start;
   font-size: 20px;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -945,9 +963,62 @@ label {
   top: 100%;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
-.header__menu-container.is-open {
+.menu-container.is-open {
   display: block;
+}
+
+.menu-container__list {
+  margin-top: 274px;
+}
+
+.menu-container__item {
+  display: block;
+  padding-bottom: 32px;
+  margin: 0;
+}
+
+.menu-container__mail {
+  display: block;
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.menu-container__phone {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.menu-container__network-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-container__item-network:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-container__network {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  margin: 0;
+  padding: 0;
 }
 
 .header__burger-menu {
@@ -978,10 +1049,15 @@ label {
   display: none;
 }
 
+.header__icon-close:hover, .header__icon-close:focus {
+  color: #2196f3;
+  translate: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header__link {
   display: block;
-  padding-top: 32px;
   padding-bottom: 32px;
+  padding-top: 0;
   color: #212121;
   font-weight: 500;
   line-height: 1.1428571429;
@@ -990,6 +1066,11 @@ label {
   text-decoration: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    padding-top: 32px;
+  }
 }
 .header__link:hover, .header__link:focus {
   color: #2196f3;
@@ -1012,6 +1093,11 @@ label {
   left: -2px;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 768px) {
+  .header__link--current::after {
+    display: none;
+  }
 }
 
 /* Список в Хедері */
