@@ -8,8 +8,8 @@
     background-color: $hero-background-color;
     
     &--overlay {
-            height: 400px;
-            max-width: 480px;
+          
+            max-width: 100%;
             margin-left: auto;
             margin-right: auto;
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -18,7 +18,13 @@
             background-position: center;
             background-size: cover;
 
-
+            @media screen and (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(/images/mobile-background-image-hero@2x.jpg);
+    
+                }
                 @media screen and(min-width:768px) {
                     height: 400px;
                     max-width: 768px;
@@ -27,6 +33,12 @@
                     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                             url(/images/tablet-background-image.jpg);
                 }
+                @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+                (min-width: 768px) and (min-resolution: 192dpi),
+                (min-width: 768px) and (min-resolution: 2dppx) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+                    url("/images/tablet-background-image@2.jpg");
+                }
 
                 @media screen and(min-width:1200px) {
                     height: 600px;
@@ -34,13 +46,22 @@
                     margin-left: auto;
                     margin-right: auto;
                     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                            url(../images/background-image-hero.jpg);
+                        url(../images/background-image-hero.jpg);
                 
                 }
-    
-
+                @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+                (min-width: 1200px) and (min-resolution: 192dpi),
+                (min-width: 1200px) and (min-resolution: 2dppx) {
+                    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                     url("/images/background-image-hero@2.jpg");
+                }
     }
+
 }
+
+       
+
+
 
 // Overlay 
 
@@ -60,23 +81,21 @@
 
     @media screen and(min-width:768px) {
     font-size: 44px;
-    line-height: calc(60 / 44);
+    line-height: calc (60/44);
     }
     @media screen and(min-width:1200px) {
     font-size: 44px;
-    line-height: calc(60 / 44);
     }
-
 }
+
 // Додаткове оформлення розмірів кнопки в секціі hero
 
 .hero__main-button {
 
-        padding: 10px 23px;
+    padding: 10px 23px;
 
     @media screen and (min-width:1200px) {
         min-width: 218px;
         padding: 10px 32px;
         }
-    }
- 
+}
