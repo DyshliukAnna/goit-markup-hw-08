@@ -21,7 +21,7 @@
 .primary-list__item {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    max-width: 450px;
 margin-top: $card-portfolio-gap;
     margin-left: $card-portfolio-gap;
    
