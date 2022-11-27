@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: baseline;
 
-    // align-items: center;
+    align-items: center;
 
     
     @media screen and (min-width:768px) {
@@ -160,6 +160,8 @@ padding-bottom: 28px;
     width: 206px;
     height: 80px;
     align-items: center;
+margin-left: 0px;
+margin-right: 0px;
     margin-bottom: 60px;
 
 
