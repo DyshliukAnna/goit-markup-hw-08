@@ -69,6 +69,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 60px;
     width: 100%;
     
@@ -83,15 +85,17 @@
     @media screen and (min-width:1200px) {
         margin-right: 70px;
         width: 231px;
+        align-items: flex-start;
        
         }
 
 }
 
 .adress {
+  
        width: 232px;
 
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:1200px) {
               text-align: center;
             }
 
@@ -173,12 +177,13 @@ margin-right: 0px;
 
 
 
-@media screen and(min-width:768px) {
-        // margin-bottom: 0px;
-        align-items: flex-start;
-    }
+// @media screen and(min-width:768px) {
+//         // margin-bottom: 0px;
+//         align-items: flex-start;
+//     }
 
     @media screen and(min-width:1200px) {
+        align-items: flex-start;
         margin-right: 94px;
         margin-bottom: 0;
         width: 206px;
