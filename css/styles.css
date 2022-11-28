@@ -127,7 +127,7 @@ img {
 
 .header__link {
   display: block;
-  padding-top: 32px;
+  /* padding-top: 32px; */
   padding-bottom: 32px;
 
   color: var(--primary-color);
