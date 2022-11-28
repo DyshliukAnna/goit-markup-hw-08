@@ -320,17 +320,14 @@ label {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 480px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .footer {
-    width: 768px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-left: 76px;
-    padding-right: 89px;
     padding-bottom: 276px;
   }
 }
@@ -345,6 +342,7 @@ label {
 }
 
 .footer__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,6 +363,8 @@ label {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-left: 76px;
+    padding-right: 89px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -375,6 +375,8 @@ label {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -388,6 +390,7 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 60px;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .footer-nav {
@@ -405,6 +408,7 @@ label {
 @media screen and (min-width: 1200px) {
   .footer-nav {
     margin-right: 70px;
+    width: 231px;
   }
 }
 
@@ -482,7 +486,7 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 206px;
+  width: 100%;
   height: 80px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -502,6 +506,7 @@ label {
   .join {
     margin-right: 94px;
     margin-bottom: 0;
+    width: 206px;
   }
 }
 
@@ -547,6 +552,7 @@ label {
 
 .backdrop__modal {
   display: block;
+  position: relative;
   padding: 40px;
   margin: 0 auto;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform cubic-bezier(0.4, 0, 0.2, 1);
@@ -555,8 +561,6 @@ label {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   max-width: 450px;
-  height: 100%;
-  max-height: 609px;
   background-color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
@@ -823,12 +827,14 @@ label {
   -webkit-box-pack: baseline;
       -ms-flex-pack: baseline;
           justify-content: baseline;
+  width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .form-footer {
     position: absolute;
-    top: 248px;
+    top: 188px;
     left: 159px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -839,6 +845,11 @@ label {
 
 .form-footer__field {
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .form-footer__field {
+    width: 100%;
+  }
 }
 
 .form-footer__text {
@@ -865,7 +876,8 @@ label {
 .form-footer__follow {
   position: relative;
   display: block;
-  min-width: 450px;
+  width: 100%;
+  max-width: 450px;
   min-height: 50px;
   padding-left: 16px;
   color: #ffffff;
@@ -929,9 +941,9 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -948,6 +960,11 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    width: 100%;
+  }
 }
 
 .menu-container {
@@ -1027,6 +1044,7 @@ label {
 }
 
 .header__burger-menu {
+  margin-right: auto;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1371,7 +1389,6 @@ label {
 /* Мікс для відступів по БЕМ в Хедері */
 .header__logo {
   display: block;
-  margin-right: 276px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
