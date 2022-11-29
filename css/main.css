@@ -1000,6 +1000,11 @@ label {
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
 .menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -1778,102 +1783,6 @@ label {
         flex-wrap: wrap;
     margin-top: -30px;
     margin-left: -30px;
-  }
-}
-.secondary-cardset .mobile-1-player {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .secondary-cardset .mobile-1-player {
-    display: none;
-  }
-}
-.secondary-cardset .tablet-1-player {
-  display: none;
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .secondary-cardset .tablet-1-player {
-    display: block;
-  }
-}
-.secondary-cardset .desktop-1-player {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .secondary-cardset .desktop-1-player {
-    display: block;
-  }
-}
-.secondary-cardset .mobile-2-player {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .secondary-cardset .mobile-2-player {
-    display: none;
-  }
-}
-.secondary-cardset .tablet-2-player {
-  display: none;
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .secondary-cardset .tablet-2-player {
-    display: block;
-  }
-}
-.secondary-cardset .desktop-2-player {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .secondary-cardset .desktop-2-player {
-    display: block;
-  }
-}
-.secondary-cardset .mobile-3-player {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .secondary-cardset .mobile-3-player {
-    display: none;
-  }
-}
-.secondary-cardset .tablet-3-player {
-  display: none;
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .secondary-cardset .tablet-3-player {
-    display: block;
-  }
-}
-.secondary-cardset .desktop-3-player {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .secondary-cardset .desktop-3-player {
-    display: block;
-  }
-}
-.secondary-cardset .mobile-4-player {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .secondary-cardset .mobile-4-player {
-    display: none;
-  }
-}
-.secondary-cardset .tablet-4-player {
-  display: none;
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .secondary-cardset .tablet-4-player {
-    display: block;
-  }
-}
-.secondary-cardset .desktop-4-player {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .secondary-cardset .desktop-4-player {
-    display: block;
   }
 }
 
