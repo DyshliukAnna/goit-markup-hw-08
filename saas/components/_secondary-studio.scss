@@ -36,80 +36,8 @@
       margin-top: calc(-1 * $card-portfolio-gap);
       margin-left: calc(-1 * $card-portfolio-gap);
   }
-//   & .mobile-1-player {
-//     display: block;
-//     @media screen and(min-width:768px) {
-//        display: none;
-//   }
-// }
-//   & .tablet-1-player {
-//     display: none;
-//     @media screen and(min-width:768px) and (max-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .desktop-1-player {
-//     display: none;
-//     @media screen and(min-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .mobile-2-player {
-//     display: block;
-//     @media screen and(min-width:768px) {
-//        display: none;
-//   }
-// }
-//   & .tablet-2-player {
-//     display: none;
-//     @media screen and(min-width:768px) and (max-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .desktop-2-player {
-//     display: none;
-//     @media screen and(min-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .mobile-3-player {
-//     display: block;
-//     @media screen and(min-width:768px) {
-//        display: none;
-//   }
-// }
-//   & .tablet-3-player {
-//     display: none;
-//     @media screen and(min-width:768px) and (max-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .desktop-3-player {
-//     display: none;
-//     @media screen and(min-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .mobile-4-player {
-//     display: block;
-//     @media screen and(min-width:768px) {
-//        display: none;
-//   }
-// }
-//   & .tablet-4-player {
-//     display: none;
-//     @media screen and(min-width:768px) and (max-width:1200px) {
-//        display: block;
-//   }
-// }
-//   & .desktop-4-player {
-//     display: none;
-//     @media screen and(min-width:1200px) {
-//        display: block;
-//   }
   
-  }
-
+}
 
 
 .secondary-item {
